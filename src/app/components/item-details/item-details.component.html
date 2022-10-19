@@ -1,0 +1,48 @@
+<!-- <div class="app-container">
+  <div class="wrapper">
+    <div class="card mb-3" style="max-width: 540px">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="{{ this.product.image }}"
+            class="img-fluid rounded-start"
+            alt="{{ this.product.name }}"
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ this.product.name }}</h5>
+
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div>
+  <div class="item-container">
+    <img
+      class="item-img"
+      src="{{ this.product.image }}"
+      alt="{{ this.product.name }}"
+    />
+    <div class="item-info">
+      <h2 class="item-name">{{ this.product.name }}</h2>
+      <p class="item-price">${{ this.product.price }}</p>
+      <div class="item-quantity-container">
+        <div class="item-quantity-adjustment" (click)="decrementQuantity()">
+          <mat-icon>remove</mat-icon>
+        </div>
+        <h1 type="number" class="item-quantity">{{ this.quantity }}</h1>
+        <div class="item-quantity-adjustment" (click)="incrementQuantity()">
+          <mat-icon>add</mat-icon>
+        </div>
+      </div>
+      <button class="add-to-cart">Add to cart</button>
+    </div>
+  </div>
+</div>
