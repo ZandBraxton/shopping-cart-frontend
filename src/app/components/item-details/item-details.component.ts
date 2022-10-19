@@ -48,5 +48,6 @@ export class ItemDetailsComponent implements OnInit {
       quantity: this.quantity,
     };
     this.cartService.addToCart(body).subscribe();
+    this.quantity = 0;
   }
 }
