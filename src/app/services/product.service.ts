@@ -8,13 +8,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductService {
+  private apiUrl = 'http://localhost:3000/products';
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>('http://localhost:3000/products');
+    return this.http.get<Product[]>(this.apiUrl);
   }
 
   getProductById(id: string | null): Observable<Product> {
-    return this.http.get<Product>('http://localhost:3000/products/' + id);
+    console.log(this.apiUrl + id);
+    return this.http.get<Product>(`${this.apiUrl}/${id}`);
   }
 }

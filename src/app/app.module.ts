@@ -13,6 +13,7 @@ import { ShopItemComponent } from './components/shop-item/shop-item.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
     CartComponent,
     ShopItemComponent,
     ItemDetailsComponent,
+    CartItemComponent,
   ],
   imports: [
     BrowserModule,
