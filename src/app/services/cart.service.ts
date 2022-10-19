@@ -19,6 +19,10 @@ export class CartService {
     return this.http.post<Cart>(`${this.apiUrl}/add`, body);
   }
 
+  deleteFromCart(productId: string): Observable<unknown> {
+    return this.http.delete(`${this.apiUrl}/delete/${productId}`);
+  }
+
   updateCart(body: addProduct): Observable<Cart> {
     return this.http.put<Cart>(`${this.apiUrl}/update`, body);
   }

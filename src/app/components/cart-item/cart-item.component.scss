@@ -25,10 +25,6 @@
       gap: 10px;
       margin-right: auto;
     }
-
-    mat-icon {
-      cursor: pointer;
-    }
   }
 }
 
@@ -41,4 +37,8 @@
 .total {
   margin-right: 2rem;
   font-weight: 800;
+}
+
+mat-icon {
+  cursor: pointer;
 }

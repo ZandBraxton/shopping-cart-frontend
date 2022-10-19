@@ -30,4 +30,10 @@ export class CartItemComponent implements OnInit {
     };
     this.cartService.updateCart(body).subscribe(() => this.updateCart.emit());
   }
+
+  deleteFromCart() {
+    this.cartService
+      .deleteFromCart(this.item.productId)
+      .subscribe(() => this.updateCart.emit());
+  }
 }
