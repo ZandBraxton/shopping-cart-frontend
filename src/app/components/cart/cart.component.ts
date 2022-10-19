@@ -20,4 +20,8 @@ export class CartComponent implements OnInit {
       error: (error) => console.log(error),
     });
   }
+
+  checkoutCart(): void {
+    this.cartService.checkoutCart().subscribe(() => this.getCart());
+  }
 }
